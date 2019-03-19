@@ -1,4 +1,4 @@
-people={
+people={ 
     "Alice":{
         'phone':'1232',
         'addr':"shanghai"
