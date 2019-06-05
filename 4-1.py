@@ -1,6 +1,6 @@
 people={ 
     "Alice":{
-        'phone':'1232',
+        'phone':'123212',
         'addr':"shanghai"
     },
     "Donnie":{
