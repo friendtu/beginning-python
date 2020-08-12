@@ -8,7 +8,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                bat 'py -3 ./py-tests.py'
+                bat 'py -3 py-tests.py'
             }
         }
         stage('deploy') {
