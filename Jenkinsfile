@@ -13,6 +13,8 @@ pipeline {
                echo "DISABLE_AUTH is ${DISABLE_AUTH}"
                echo "git username  is ${GitCredentials_USR}"
                echo "git password is ${GitCredentials_PSW}"
+               bat echoall.bat ${GitCredentials_USR} ${GitCredentials_PSW}
+               
                bat 'py -3 --version'
             }
         }
