@@ -11,7 +11,8 @@ pipeline {
             steps {
                echo "Database engine is ${DB_ENGINE}"
                echo "DISABLE_AUTH is ${DISABLE_AUTH}"
-               echo "AWS_ACCESS_KEY_ID is ${GitCredentials}"
+               echo "git username  is ${GitCredentials_USR}"
+               echo "git password is ${GitCredentials_PSW}"
                bat 'py -3 --version'
             }
         }
