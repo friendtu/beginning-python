@@ -1,4 +1,4 @@
-note {
+node {
     stage('Build') {
         bat 'set'
     }
