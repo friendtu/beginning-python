@@ -1,7 +1,7 @@
 node {
     try {
         stage('Build') {
-            bat 'fake.bat'
+            bat 'set'
         }
         echo 'This will run only if successful'
     } catch (e) {
