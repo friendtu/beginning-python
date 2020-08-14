@@ -1,13 +1,10 @@
 node {
-    stage('Build') {
-        bat 'set'
-    }
-    
-    stage('Deloy') {
-        timeout(time:3, unit:'MINUTES'){
-            retry(3) {
-                bat 'flakey-deploy.sh'   
-            }
+    try {
+        stage('Build') {
+            bat 'set;exit -1'
         }
+        echo "This will run only if successful'
+    } catch (e) {
+        echo 'This will run on if failed'
     }
 }
