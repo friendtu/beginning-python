@@ -1,8 +1,15 @@
+properties([
+    parameters([
+        booleanParam(defaultValue: true, description: 'if it will send mail', name: 'ToSendmail')
+        ])
+    ])
+
 node('inventorqabuild') {
     withEnv(['DISABLE_AUTH=True','DB_ENGINE=sqlite']){
         try {
             JIRA_ACCOUNT=credentials("jira_account")
             stage('Build') {
+                echo "ToSendmail: ${params.ToSendmail}"
                 echo "DISABLE_AUTH: ${DISABLE_AUTH}"
                 echo "DB_ENGINE: ${DB_ENGINE}"
                 echo "JIRA_ACCOUNT: ${JIRA_ACCOUNT}"
